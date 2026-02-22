@@ -7,8 +7,6 @@ class User < ApplicationRecord
   # 空の投稿を保存できない（presence: true）
   validates :nickname,        presence: true
   validates :birth_date,      presence: true
-  validates :email,           presence: true, uniqueness: true
-  validates :encrypted_password, presence: true, length: { minimum: 6 }
   validates :last_name,       presence: true
   validates :first_name,      presence: true
   validates :last_name_kana,  presence: true
