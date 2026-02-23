@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root to: "items#index"
-  resources :items, only: [:index, :new, :create, :show] # 他のアクションは後ほど追加します
+  resources :items, only: [:index, :new, :create, :show, :edit, :update, :destroy] # 他のアクションは後ほど追加します
 end
