@@ -130,8 +130,7 @@
     <% if @items.present? %>
       <% @items.each do |item| %>
         <li class='list'>
-          <%# 詳細ページができたら item_path(item) に書き換えます %>
-          <%= link_to "#" do %>
+          <%= link_to item_path(item) do %>
             <div class='item-img-content'>
               <%= image_tag item.image, class: "item-img" %>
 
