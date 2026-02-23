@@ -12,8 +12,8 @@ class Item < ApplicationRecord
 
   # 空の投稿を保存できない
   validates :image,                  presence: true
-  validates :name,                   presence: true
-  validates :info,                   presence: true
+  validates :name,                   presence: true, length: { maximum: 40 }
+  validates :info,                   presence: true, length: { maximum: 1000 }
   validates :price,                  presence: true
 
   # ジャンルの選択が「---」の時は保存できないようにする
