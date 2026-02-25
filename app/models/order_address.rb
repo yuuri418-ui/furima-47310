@@ -1,7 +1,7 @@
 class OrderAddress
   include ActiveModel::Model
   # 保存したい全てのカラム（Order + Address）を扱えるようにする
-  attr_accessor :user_id, :item_id, :postal_code, :prefecture_id, :city, :addresses, :building, :phone_number
+  attr_accessor :user_id, :item_id, :postal_code, :prefecture_id, :city, :addresses, :building, :phone_number, :token
 
   # 1-4. バリデーションの記述
   with_options presence: true do
@@ -12,6 +12,7 @@ class OrderAddress
     validates :city
     validates :addresses
     validates :phone_number, format: { with: /\A\d{10,11}\z/, message: 'is invalid' }
+    validates :token, presence: true
   end
 
   # 1-5. データをテーブルに保存する処理
