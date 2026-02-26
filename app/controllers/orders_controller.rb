@@ -17,6 +17,7 @@ class OrdersController < ApplicationController
       @order_address.save
       redirect_to root_path
     else
+      @public_key = Rails.application.credentials.payjp[:public_key]
       render :index, status: :unprocessable_entity
     end
   end
