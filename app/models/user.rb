@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :orders
+  has_many :items
+
   # 空の投稿を保存できない（presence: true）
   validates :nickname,        presence: true
   validates :birth_date,      presence: true
