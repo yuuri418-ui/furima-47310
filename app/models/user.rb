@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :orders
+  has_many :items
 
   # 空の投稿を保存できない（presence: true）
   validates :nickname,        presence: true
