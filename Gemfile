@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby "3.2.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.0"
+gem "rails", "~> 7.0.0"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -83,3 +83,5 @@ gem 'factory_bot_rails'
 gem 'faker'
 
 gem 'active_hash'
+
+gem 'payjp'
