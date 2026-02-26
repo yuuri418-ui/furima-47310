@@ -134,8 +134,7 @@
             <div class='item-img-content'>
               <%= image_tag item.image, class: "item-img" %>
 
-              <%# 購入機能実装時に item.sold? などで条件分岐させます %>
-              <% if false %>
+              <% if item.order.present? %>
                 <div class='sold-out'>
                   <span>Sold Out!!</span>
                 </div>
